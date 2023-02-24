@@ -1,0 +1,30 @@
+.root{
+    -fx-background-color: #191919;
+
+}
+
+
+#Title{
+    -fx-font-size: 80;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill: "white";
+    -fx-alignment: center;
+}
+.label{
+    -fx-text-fill: "white";
+    -fx-font-size: 20;
+
+}
+.button{
+    -fx-background-color: #191919;
+    -fx-font-size: 20;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill: "white";
+    -fx-border-radius: 60px;
+    
+}
+
+.button:hover {
+    -fx-background-color: #e1e1e1;
+    -fx-text-fill: #191919;
+  }
