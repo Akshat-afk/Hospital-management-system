@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -16,7 +17,15 @@ public class PrimaryController {
     private Scene scene;
     private Parent root;
     
-    
+    @FXML
+    private void switchToHome(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("primary.fxml"));
+        stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
     @FXML
     private void switchToPLogin(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("plogin.fxml"));
@@ -26,6 +35,16 @@ public class PrimaryController {
         stage.show();
 
     }
+    @FXML
+    private void switchToHelp(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("help.fxml"));
+        stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
     @FXML
     private void switchToDLogin(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("dlogin.fxml"));
@@ -45,9 +64,18 @@ public class PrimaryController {
 
     }
     @FXML
+    private void switchToAboutUs(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("aboutus.fxml"));
+        stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+    @FXML
     private TextField Username;
     @FXML
-    private TextField Password;
+    private PasswordField Password;
     String username,password;
     public void login(ActionEvent event){
         //check this data for the server
